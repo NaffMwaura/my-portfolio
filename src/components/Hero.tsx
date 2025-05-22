@@ -1,10 +1,12 @@
 import profile from "../assets/profile.jpg"; // rename and put your image here
+import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-10 pt-32 pb-10 bg-[#0b0c2a] text-white">
+    <section className="flex h-[100vh] flex-col md:flex-row items-center justify-between px-10 pt-32 pb-10 bg-[#0b0c2a] text-white">
+     <Navbar /> 
       <div className="max-w-xl">
-        <h2 className="text-3xl text-red-500">Hello, I'm</h2>
+        <h2 className="text-3xl text-red-500 font-bold ita">Hello, I'm</h2>
         <h1 className="text-5xl font-bold text-green-400 mt-2">
           Naff Mwaura <span className="text-white">_</span>
         </h1>

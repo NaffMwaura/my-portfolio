@@ -1,22 +1,15 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import About from "./components/About";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
 
-import './App.css'
-
-function App() {
-
-
+const App = () => {
   return (
-    
-    <>
-     
+    <div>
       <Navbar />
       <Hero />
       <About />
+    </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default App
+export default App;
