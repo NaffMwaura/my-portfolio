@@ -28,7 +28,8 @@ const Hero = () => {
         <img
           src={profile}
           alt="Profile"
-          className="rounded-xl w-64 h-64 object-cover shadow-lg"
+          className="rounded-xl w-40 h-40 md:h-64 object-cover shadow-lg"
+          //"w-40 h-40 md:w-64 md:h-64"
         />
       </div>
     </section>
