@@ -23,9 +23,12 @@ const educationData = [
 const Education = () => {
   return (
     <section className="bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
-      <h2 className="text-3xl font-bold text-purple-400 mb-8 flex items-center gap-2">
-        📚 Education 🎓
-      </h2>
+            <div className="flex justify-center">
+            <h1 className="text-3xl font-bold text-purple-400 mb-8 flex items-center gap-2">
+                📚 Education 🎓
+            </h1>
+            </div>
+
       <div className="grid md:grid-cols-3 gap-6">
         {educationData.map((edu, idx) => (
           <div

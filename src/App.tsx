@@ -6,7 +6,6 @@ import FeaturedProjects from "./components/FeaturedProjects";
 import Experience from "./components/Experience";
 import Skills from "./components/skills";
 import Contact from "./components/Contact";
-
 const App = () => {
   return (
     <div>
