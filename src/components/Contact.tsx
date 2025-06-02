@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const fadeIn = {
@@ -46,7 +46,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-[#0b0c2a] text-white px-6 md:px-20 py-16" id="contact">
+    <section  id = "contact" className="scroll-mt-20 bg-[#0b0c2a] text-white px-6 md:px-20 py-16">
       <div className="flex flex-col md:flex-row justify-between gap-12">
         {/* Social Connect Section */}
         <motion.div
@@ -63,16 +63,29 @@ const Contact = () => {
             <a href="https://github.com/NaffMwaura" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-400">
+            <a href="https://www.linkedin.com/in/naff-mwaura-2bb415257/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-400">
               <FaLinkedin />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-purple-400">
               <FaTwitter />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-purple-400">
+            <a href="https://www.facebook.com/naftali.mwaura.352343" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-purple-400">
               <FaFacebook />
             </a>
+                  <a
+          href="https://wa.me/254115408536" // Replace with your actual WhatsApp number
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded shadow-lg"
+        >
+          <FaWhatsapp className="text-xl" />
+        </a>
           </div>
+          <section className="bg-[#0b0c2a] text-white px-10 py-16" id="contact">
+
+      
+  
+    </section>
         </motion.div>
 
         {/* Contact Form */}

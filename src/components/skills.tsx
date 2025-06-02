@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const skills = [
   {
     category: "Languages",
@@ -19,16 +21,26 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-[#0b0c2a] text-white py-16 px-6 md:px-12">
-      <h2 className="text-3xl font-bold mb-10 text-center text-purple-400">
+    <section id= "skills" className="scroll-mt-20 bg-[#0b0c2a] text-white py-16 px-6 md:px-12">
+        <motion.h2
+        className="text-3xl font-bold mb-10 text-center text-purple-400"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 3 }}
+        >
         🚀 Skills & Technologies
-      </h2>
+        </motion.h2>
+
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {skills.map((skill, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-[#15162c] border border-purple-700 rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 5, delay: index * 0.2 }}
+            viewport={{ once: true }}
           >
             <h3 className="text-xl font-semibold text-yellow-400 mb-4">
               {skill.category}
@@ -43,7 +55,7 @@ const Skills = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

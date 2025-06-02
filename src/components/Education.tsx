@@ -22,7 +22,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section className="bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
+    <section id = "education" className="scroll-mt-20 bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
             <div className="flex justify-center">
             <h1 className="text-3xl font-bold text-purple-400 mb-8 flex items-center gap-2">
                 📚 Education 🎓

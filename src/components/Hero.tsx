@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 
 
-import profile1 from "../assets/My_dp-Picture.jpg";
+import profile1 from "../assets/image.png";
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/IMG-20221008-WA0025.jpg";
 import profile4 from "../assets/profile.jpg";
@@ -29,7 +29,7 @@ const Hero = () => {
   return (
 
 
-    <section className="flex h-[50vh] flex-col md:flex-row items-center justify-between px-70 pt-20 pb-10 bg-[#0b0c2a] text-white">
+    <section id = "home"className=" scroll-mt-20 flex h-[50vh] flex-col md:flex-row items-center justify-between px-70 pt-20 pb-10 bg-[#0b0c2a] text-white">
       {/* Left content */}
       <div className="max-w-xl">
         <h2 className="text-3xl text-red-500 font-bold">Hello, I'm</h2>

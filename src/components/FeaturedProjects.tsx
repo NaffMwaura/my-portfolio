@@ -25,7 +25,7 @@ const projects = [
 
 const FeaturedProjects = () => {
   return (
-    <section className="bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
+    <section id = "projects" className="scroll-mt-20 bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
       <h2 className="text-3xl font-bold text-yellow-400 mb-10 text-center flex items-center justify-center gap-2">
         ⭐ Featured Project ⭐
       </h2>
