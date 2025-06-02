@@ -20,11 +20,7 @@ const About = () => {
         transition={{ duration: 1.2, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        I'm a Computer Science student hailing from Kenya. With a passion for technology and a love for adventure, I bring a unique perspective to the field.
-        I have a wealth of knowledge and experience in various aspects of technology, including software development, database management, and web programming.
-        I'm a dedicated learner who is always seeking out new challenges and opportunities for growth.
-        When I'm not studying or working on projects, I enjoy exploring the great outdoors and going on adventures.
-        With my combination of technical expertise and adventurous spirit, I'm ready to tackle any challenge that comes my way.
+        I’m an IT student from Kenya with a strong passion for technology and a spirit of adventure. My diverse experience spans software development, database management, and web programming, allowing me to bring a fresh and dynamic perspective to the tech field. I’m a dedicated and curious learner, always eager to embrace new challenges and grow both personally and professionally. Outside of academics and projects, I enjoy spending time in nature and seeking out new adventures. This blend of technical expertise and adventurous drive equips me to take on challenges with confidence and creativity.
       </motion.p>
     </section>
   );

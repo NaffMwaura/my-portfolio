@@ -11,6 +11,7 @@ import profile3 from "../assets/IMG-20221008-WA0025.jpg";
 import profile4 from "../assets/profile.jpg";
 
 
+
 const Hero = () => {
   const images = [profile1, profile2, profile3, profile4];
 
@@ -45,9 +46,8 @@ const Hero = () => {
                   />
                 </h1>
         <div className="flex gap-3 mt-4 flex-wrap">
-          <span className="text-yellow-400 font-medium">Fullstack Developer,</span>
-          <span className="text-blue-300 font-medium">Azure AI Engineer,</span>
-          <span className="text-red-300 font-medium">Azure Data Scientist.</span>
+          <span className="text-yellow-400 font-medium">Fullstack Developer</span>
+        
         </div>
         <a
           href="/resume.pdf"
@@ -58,23 +58,23 @@ const Hero = () => {
         </a>
       </div>
 
+
       {/* Right - Carousel Box */}
-<div className="mt-10 md:mt-0 w-[320px] h-[450px] rounded-xl overflow-hidden shadow-lg">
+<div className="mt-10 md:mt-0 w-[320px] h-[450px] rounded-xl overflow-hidden shadow-lg bg-black">
   <Slider {...settings}>
     {images.map((img, idx) => (
-      <div
-        key={idx}
-        className="w-full h-[1000px] flex items-center justify-center "
-      >
+      <div key={idx} className="w-full h-full flex items-center justify-center">
         <img
           src={img}
           alt={`Profile ${idx + 1}`}
-          className="max-h-full max-w-full object-contain"
+          className="w-auto h-full object-contain"
         />
       </div>
     ))}
   </Slider>
 </div>
+
+
 
     </section>
   );

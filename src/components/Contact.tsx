@@ -66,7 +66,7 @@ const Contact = () => {
             <a href="https://www.linkedin.com/in/naff-mwaura-2bb415257/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-purple-400">
               <FaLinkedin />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-purple-400">
+            <a href="https://x.com/Naff_Zoe" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-purple-400">
               <FaTwitter />
             </a>
             <a href="https://www.facebook.com/naftali.mwaura.352343" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-purple-400">
