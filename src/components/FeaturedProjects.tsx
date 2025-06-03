@@ -1,24 +1,24 @@
 const projects = [
   {
-    title: "Dashboard System ERP",
-    desc: "A hybrid app that streamlines procurement and tender processes across various counties.",
-    img: "/images/project1.png",
-    live: "https://your-live-link.com",
-    github: "https://github.com/your-repo",
+    title: "SkillMatch AI",
+    desc: "This is a Web Application that uses AI for both Jobseekers and Employers. The application is able to recommend jobs to job seekers based on their skills and experience. I used Angular frontend, NodeJS and express for backend and postgreSQL database",
+    img: "/image.png",
+    live: "https://skillsmatchai-app-k3p7.vercel.app/",
+    github: "https://github.com/NaffMwaura/skillsmatchai-app",
   },
   {
-    title: "Surge Procurement Ltd",
-    desc: "Web platform for procurement tracking and vendor management.",
-    img: "/images/project2.png",
-    live: "#",
-    github: "#",
+    title: "QuoteManager App",
+    desc: "The QuoteManager is a simple and effective web application that allows users to create, view, edit, and delete inspirational quotes. The platform is designed for personal use, bloggers, or anyone who wants to manage a curated list of quotes.",
+    img: "download (2).png",
+    live: "https://github.com/NaffMwaura/QuoteManagerApp",
+    github: "https://github.com/NaffMwaura/QuoteManagerApp",
   },
   {
-    title: "RideWave Renting System",
-    desc: "Rental web app built with React and Node.js, supporting car listings and payments.",
-    img: "/images/project3.png",
-    live: "#",
-    github: "#",
+    title: " Inn Booking Website (PHP & MySQL)",
+    desc: "Developed a dynamic and responsive website for a local inn that allows users to browse rooms, make reservations, and contact the innkeepers. The platform was built using PHP for server-side logic and MySQL for the database. It offers a smooth booking experience and an admin dashboard for managing reservations.",
+    img: "download (5).jpg",
+    live: "https://github.com/NaffMwaura/inn-Website",
+    github: "https://github.com/NaffMwaura/inn-Website",
   },
   // Add more projects here...
 ];
@@ -27,7 +27,7 @@ const FeaturedProjects = () => {
   return (
     <section id = "projects" className="scroll-mt-20 bg-[#0b0c2a] text-white px-6 md:px-12 py-16">
       <h2 className="text-3xl font-bold text-yellow-400 mb-10 text-center flex items-center justify-center gap-2">
-        ⭐ Featured Project ⭐
+        ⭐ Featured Projects ⭐
       </h2>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">

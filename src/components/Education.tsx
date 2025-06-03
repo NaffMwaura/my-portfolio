@@ -1,24 +1,46 @@
 // Education.tsx
 const educationData = [
   {
-    title: "Computer Science",
-    institution: "Kirinyaga University",
-    date: "Graduating in October 2025",
-    img: "/images/kyu.png", // Place the image in the public/images folder
+    title: "Business Information Technology",
+    institution: "Dedan Kimathi University of Technology",
+    date: "Graduating in April 2026",
+    img: "./download (3).jpg", // Place the image in the public/images folder
+  },
+
+    {
+    title: " Software Development Program",
+    institution: "TEACH2GIVE",
+    date: "Graduated in April 2025",
+    img: "image1.jpg",
   },
   {
-    title: "Software Engineering",
-    institution: "ALX Software Engineering Programme",
-    date: "Graduate August 2023",
-    img: "/images/alx.png",
+    title: "Introduction to Networking",
+    institution: "Cisco Networking Academy",
+    date: "Graduated April 2023",
+    img: "net.png",
   },
-  {
-    title: "Aberdare Institute of Catering",
-    institution: "Diploma in Food Production",
-    date: "Graduated in December 2021",
-    img: "/images/aic.png",
+    {
+    title: "Introduction to IoT",
+    institution: "Cisco Networking Academy",
+    date: "Graduated April 2024",
+    img: "iot.png",
   },
+      {
+    title: "Cybersecurity essentials",
+    institution: "Cisco Networking Academy",
+    date: "Graduated August 2024",
+    img: "cb.png",
+  },
+        {
+    title: "Computer Packages",
+    institution: "Petcom Computer College",
+    date: "Graduated May 2022",
+    img: "pet.jpg",
+  },
+
+
 ];
+
 
 const Education = () => {
   return (
@@ -33,7 +55,7 @@ const Education = () => {
         {educationData.map((edu, idx) => (
           <div
             key={idx}
-            className="border border-purple-500 rounded-lg p-6 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300"
+            className="border border-purple-600 rounded-lg p-10 flex flex-col items-center text-center hover:shadow-lg transition-all duration-300"
           >
             <img
               src={edu.img}

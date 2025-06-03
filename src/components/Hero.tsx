@@ -22,9 +22,15 @@ const Hero = () => {
   };
 
   return (
+
+    /*<section
+  id="home"
+  className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center px-1 md:px-20 pt-32 pb-10 bg-[#0b0c2a] text-white min-h-screen gap-6"
+>
+ */
     <section
       id="home"
-      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 pt-32 pb-10 bg-[#0b0c2a] text-white min-h-screen"
+      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-1 md:px-60 pt-12 pb-5 bg-[#0b0c2a] text-white min-h-screen"
     >
       {/* Left Content */}
       <div className="max-w-xl text-center md:text-left">
