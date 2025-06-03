@@ -29,8 +29,9 @@ const Hero = () => {
 
   return (
 
+      //<section className="flex h-[100vh] flex-col md:flex-row items-center justify-between px-10 pt-32 pb-10">
 
-    <section id = "home"className=" scroll-mt-20 flex h-[50vh] flex-col md:flex-row items-center justify-between px-70 pt-20 pb-10 bg-[#0b0c2a] text-white">
+    <section id = "home"className=" scroll-mt-20 flex h-[100vh] flex-col md:flex-row items-center justify-between px-70 pt-32 pb-10 bg-[#0b0c2a] text-white">
       {/* Left content */}
       <div className="max-w-xl">
         <h2 className="text-3xl text-red-500 font-bold">Hello, I'm</h2>
