@@ -3,16 +3,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Typewriter } from 'react-simple-typewriter';
 
-
-
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/IMG-20221008-WA0025.jpg";
 import profile4 from "../assets/profile.jpg";
 
-
-
 const Hero = () => {
-  const images = [ profile2, profile3, profile4];
+  const images = [profile2, profile3, profile4];
 
   const settings = {
     dots: false,
@@ -23,31 +19,29 @@ const Hero = () => {
     autoplay: true,
     autoplaySpeed: 200,
     arrows: false,
-  };  
-  
+  };
 
   return (
-
-      //<section className="flex h-[100vh] flex-col md:flex-row items-center justify-between px-10 pt-32 pb-10">
-
-    <section id = "home"className=" scroll-mt-20 flex h-[100vh] flex-col md:flex-row items-center justify-between px-70 pt-32 pb-10 bg-[#0b0c2a] text-white">
-      {/* Left content */}
-      <div className="max-w-xl">
-        <h2 className="text-3xl text-red-500 font-bold">Hello, I'm</h2>
-                <h1 className="text-5xl font-bold text-green-400 mt-2">
-                  <Typewriter
-                    words={['Naff Mwaura']}
-                    loop={true}
-                    cursor
-                    cursorStyle="_"
-                    typeSpeed={150}
-                    deleteSpeed={200}
-                    delaySpeed={1500}
-                  />
-                </h1>
-        <div className="flex gap-3 mt-4 flex-wrap">
+    <section
+      id="home"
+      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-20 pt-32 pb-10 bg-[#0b0c2a] text-white min-h-screen"
+    >
+      {/* Left Content */}
+      <div className="max-w-xl text-center md:text-left">
+        <h2 className="text-2xl sm:text-3xl text-red-500 font-bold">Hello, I'm</h2>
+        <h1 className="text-4xl sm:text-5xl font-bold text-green-400 mt-2">
+          <Typewriter
+            words={['Naff Mwaura']}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={150}
+            deleteSpeed={200}
+            delaySpeed={1500}
+          />
+        </h1>
+        <div className="flex justify-center md:justify-start gap-3 mt-4 flex-wrap">
           <span className="text-yellow-400 font-medium">Fullstack Developer</span>
-        
         </div>
         <a
           href="/resume.pdf"
@@ -58,25 +52,22 @@ const Hero = () => {
         </a>
       </div>
 
-
-      {/* Right - Carousel Box */}
-<div className="mt-10 md:mt-0 w-[320px] h-[450px] rounded-xl overflow-hidden shadow-lg bg-black">
-  <Slider {...settings}>
-    {images.map((img, idx) => (
-      <div key={idx} className="w-full h-full flex items-center justify-center">
-        <img
-          src={img}
-          alt={`Profile ${idx + 1}`}
-          className="w-auto h-full object-contain"
-        />
+      {/* Right - Carousel */}
+      <div className="mb-10 md:mb-0 w-[260px] sm:w-[300px] md:w-[320px] h-[400px] sm:h-[430px] md:h-[450px] rounded-xl overflow-hidden shadow-lg bg-black">
+        <Slider {...settings}>
+          {images.map((img, idx) => (
+            <div key={idx} className="w-full h-full flex items-center justify-center">
+              <img
+                src={img}
+                alt={`Profile ${idx + 1}`}
+                className="w-auto h-full object-contain"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-    ))}
-  </Slider>
-</div>
-
-
-
     </section>
   );
 };
+
 export default Hero;
