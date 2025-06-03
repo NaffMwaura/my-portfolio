@@ -5,7 +5,6 @@ import { Typewriter } from 'react-simple-typewriter';
 
 
 
-import profile1 from "../assets/image.png";
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/IMG-20221008-WA0025.jpg";
 import profile4 from "../assets/profile.jpg";
@@ -13,7 +12,7 @@ import profile4 from "../assets/profile.jpg";
 
 
 const Hero = () => {
-  const images = [profile1, profile2, profile3, profile4];
+  const images = [ profile2, profile3, profile4];
 
   const settings = {
     dots: false,
