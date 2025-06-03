@@ -140,7 +140,7 @@ const Contact = () => {
         variants={fadeIn}
       >
         <p>© Copyright 2025 | Naff Mwaura</p>
-        <p>Fullstack Developer • Azure AI Engineer & Data Scientist</p>
+        <p> • Fullstack Developer </p>
         <p>Designed by <span className="text-purple-400">@naffmwaura</span></p>
       </motion.div>
     </section>
