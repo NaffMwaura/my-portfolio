@@ -30,10 +30,10 @@ const Hero = () => {
  */
     <section
       id="home"
-      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-1 md:px-60 pt-12 pb-5 bg-[#0b0c2a] text-white min-h-screen"
+      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-between px-1 md:px-60 pt-12 pb-1 bg-[#0b0c2a] text-white min-h-screen"
     >
       {/* Left Content */}
-      <div className="max-w-xl text-center md:text-left">
+      <div className="max-w-xl text-center md:text-left pb-1">
         <h2 className="text-2xl sm:text-3xl text-red-500 font-bold">Hello, I'm</h2>
         <h1 className="text-4xl sm:text-5xl font-bold text-green-400 mt-2">
           <Typewriter
