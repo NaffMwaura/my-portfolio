@@ -101,14 +101,14 @@ const Contact = () => {
           <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
             <input
               type="text"
-              name="from_name"
+              name="name"
               placeholder="Name:"
               required
               className="w-full p-3 rounded bg-[#1f1f38] border border-gray-600 text-white"
             />
             <input
               type="email"
-              name="reply_to"
+              name="email"
               placeholder="Email:"
               required
               className="w-full p-3 rounded bg-[#1f1f38] border border-gray-600 text-white"
