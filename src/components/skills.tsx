@@ -7,7 +7,7 @@ const skills = [
   },
   {
     category: "Frameworks & Libraries",
-    items: ["React", "Next.js", "Node.js", "Express", "Tailwind CSS", "Bootstrap"],
+    items: ["React", "Next.js", "Angular","Node.js", "Express", "Tailwind CSS", "Bootstrap","Fast API" ,"TensorFlow"],
   },
   {
     category: "Tools & Platforms",

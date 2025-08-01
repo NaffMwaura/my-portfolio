@@ -20,6 +20,21 @@ const projects = [
     live: "https://github.com/NaffMwaura/inn-Website",
     github: "https://github.com/NaffMwaura/inn-Website",
   },
+{
+  title: "AgroScan AI: Tea Leaf Disease Detector",
+  desc: "Developed an AI/ML-powered web application for smallholder tea farmers in Kiambu County to instantly diagnose common tea leaf diseases from uploaded images. It provides confidence scores and actionable agricultural recommendations, built with a React/TypeScript frontend and a Python/FastAPI backend leveraging TensorFlow (MobileNetV2).",
+  img: "./Screenshot 2025-07-29 150802.png", 
+  live: "https://agroscanai.netlify.app", 
+  github: "https://github.com/NaffMwaura/Agroscan-ai", 
+},
+{
+  title: "Zod Post Viewer",
+  desc: "A Next.js 15 and TypeScript web application displaying blog posts parsed and validated using Zod schemas. Supports image grids, tag filtering, and a responsive UI with Tailwind CSS.",
+  img: "./w1GE8ao.png",
+  live:   "https://github.com/NaffMwaura/zod-post-viewer",
+  github: "https://github.com/NaffMwaura/zod-post-viewer",
+}
+
   // Add more projects here...
 ];
 
