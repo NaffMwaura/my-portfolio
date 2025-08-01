@@ -5,6 +5,11 @@ const Navbar = () => {
   // Theme state and logic would go here if you were to implement it
   // const [darkMode, setDarkMode] = useState(false);
   
+  // A function to close the menu, making the code cleaner
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-[#0b0c2a] text-white dark:bg-black dark:text-white fixed top-0 left-0 w-full z-10 py-4 shadow-md transition-colors duration-300">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-10">
@@ -58,7 +63,12 @@ const Navbar = () => {
             "contact",
           ].map((id) => (
             <li key={id} className="py-2 md:py-0">
-              <a href={`#${id}`} className="hover:text-purple-400">
+              <a 
+                href={`#${id}`} 
+                className="hover:text-purple-400"
+                // Add this onClick handler to close the menu when a link is clicked
+                onClick={closeMenu}
+              >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </a>
             </li>
