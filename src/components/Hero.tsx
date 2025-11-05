@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 // Ensure these paths are correct in your project structure
 import profile2 from "../assets/Naff_Graduating.jpg";
-import profile3 from "../assets/DSC_0437.jpg";
+import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
 import profile5 from "../assets/sui.jpg"
 import profile7 from "../assets/DSC_0111.jpg";
