@@ -33,9 +33,16 @@ const projects = [
   img: "./w1GE8ao.png",
   live:   "https://github.com/NaffMwaura/zod-post-viewer",
   github: "https://github.com/NaffMwaura/zod-post-viewer",
+},
+{
+  title: "PostCraft AI (Gemini Nano Codelab)",
+  desc: "An Angular application leveraging the experimental **Chrome Built-in AI (Gemini Nano) API** for fast, **on-device** text generation. Features include content refinement, real-time streaming using **AsyncGenerators**, and OCR, ensuring user **privacy**.",
+  img: "./Screenshot 2025-11-06 014246.png",
+  live: "https://postcraft-lxnjizfni-naff-mwauras-projects.vercel.app", // Use your Vercel URL here
+  github: "https://github.com/NaffMwaura/devfest-chrome-build-in-ai-workshop",
 }
 
-  // Add more projects here...
+  // More projects are coming here...
 ];
 
 const FeaturedProjects = () => {

@@ -5,11 +5,13 @@ import { Typewriter } from 'react-simple-typewriter';
 
 // Ensure these paths are correct in your project structure
 import profile2 from "../assets/Naff_Graduating.jpg";
-import profile3 from "../assets/IMG-20221008-WA0025.jpg";
+import profile3 from "../assets/DSC_0437.jpg";
 import profile4 from "../assets/profile.jpg";
+import profile5 from "../assets/sui.jpg"
+import profile7 from "../assets/DSC_0111.jpg";
 
 const Hero = () => {
-  const images = [profile2, profile3, profile4];
+  const images = [profile2, profile3, profile4, profile5, profile7];
   const professions = ['  Software Developer', 'AI/ML Engineer', 'IT Student'];
 
   const settings = {
