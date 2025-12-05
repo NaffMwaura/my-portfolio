@@ -22,11 +22,12 @@ const projects = [
   },
 {
   title: "AgroScan AI: Tea Leaf Disease Detector",
-  desc: "Developed an AI/ML-powered web application for smallholder tea farmers in Kiambu County to instantly diagnose common tea leaf diseases from uploaded images. It provides confidence scores and actionable agricultural recommendations, built with a React/TypeScript frontend and a Python/FastAPI backend leveraging TensorFlow (MobileNetV2).",
-  img: "./Screenshot 2025-07-29 150802.png", 
-  live: "https://agroscanai.netlify.app", 
-  github: "https://github.com/NaffMwaura/Agroscan-ai", 
+  desc: "Developed an AI/ML-powered web application for smallholder tea farmers in Kiambu County to instantly diagnose common tea leaf diseases from uploaded images. It provides confidence scores and actionable agricultural recommendations, built with a React/TypeScript frontend and a Python/FastAPI backend leveraging TensorFlow (MobileNetV2). It has a Chatbot that provides real time assistance to farmers. Looking forwatrd to launching the Mobile application soon!",
+  img: "./agro.png", 
+  live: "https://coffeescan-ai.netlify.app", 
+  github: "https://github.com/NaffMwaura/coffee-disease-detector", 
 },
+
 {
   title: "Zod Post Viewer",
   desc: "A Next.js 15 and TypeScript web application displaying blog posts parsed and validated using Zod schemas. Supports image grids, tag filtering, and a responsive UI with Tailwind CSS.",
@@ -40,8 +41,15 @@ const projects = [
   img: "./Screenshot 2025-11-06 014246.png",
   live: "https://postcraft-lxnjizfni-naff-mwauras-projects.vercel.app", // Use your Vercel URL here
   github: "https://github.com/NaffMwaura/devfest-chrome-build-in-ai-workshop",
-}
+},
 
+{
+  title: "CoffeeScan AI: Coffee Leaf Disease Detector",
+  desc: "Developed smart AI/ML-powered web application for Coffee farmers in Nyeri County that instantly diagnose common Coffee leaf diseases from uploaded images. It provides confidence scores and actionable agricultural recommendations, built with a React/TypeScript frontend and a Python/FastAPI backend leveraging TensorFlow (MobileNetV2).",
+  img: "./coffee.png", 
+  live: "https://agroscanai.netlify.app", 
+  github: "https://github.com/NaffMwaura/Agroscan-ai", 
+},
   // More projects are coming here...
 ];
 
