@@ -17,7 +17,7 @@ const About = () => {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          About me✨
+          About Naff Mwaura ✨
         </motion.h2>
 
         <motion.p
@@ -27,15 +27,14 @@ const About = () => {
           transition={{ duration: 1.2, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          I’m an IT student from Kenya with a strong passion for technology and a
-          spirit of adventure. My diverse experience spans software development,
-          database management, and web programming, allowing me to bring a fresh
-          and dynamic perspective to the tech field. I’m a dedicated and curious
-          learner, always eager to embrace new challenges and grow both
-          personally and professionally. Outside of academics and projects, I
-          enjoy spending time in nature and seeking out new adventures. This
-          blend of technical expertise and adventurous drive equips me to take on
-          challenges with confidence and creativity.
+          I’m Naff Mwaura, an IT student from Kenya with a strong passion for technology and a
+          spirit of adventure. My core expertise is in Full-Stack Software Development,
+          focusing on resilient and scalable solutions using TypeScript, React, Angular, and Node.js. 
+          I have professional experience spanning advanced topics like database management (PostgreSQL/NEON) and the integration of AI/ML models (FastAPI/TensorFlow) into live systems.
+          
+          I’m a dedicated and curious learner, currently expanding my skills into cutting-edge areas like
+          Kubernetes (K3S) and IOTA blockchain integration. This blend of deep technical skill
+          and adventurous drive equips Naff to take on complex engineering challenges with confidence and creativity.
         </motion.p>
       </div>
     </section>
