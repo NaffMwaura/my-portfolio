@@ -1,30 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Existing viewports... -->
     
+    <!-- THE MOBILE FIX: This tag tells the phone to match the screen's width and not zoom out -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="theme-color" content="#0b0c2a" />
+    <meta name="google-site-verification" content="iLnF0A6ZrS4qNRH4Y-nkj1mCGVwfXlS8niFUW3KynZk" />
+
     <!-- 1. PRIMARY TITLE TAG -->
     <title>Naff Mwaura | React & Node.js Software Engineer | Portfolio</title>
-    <meta name="google-site-verification" content="iLnF0A6ZrS4qNRH4Y-nkj1mCGVwfXlS8niFUW3KynZk" />
     
-    <!-- 2. META DESCRIPTION (Crucial for search results snippet) -->
+    <!-- 2. META DESCRIPTION -->
     <meta name="description" content="Naff Mwaura is a seasoned Software Engineer specializing in React, TypeScript, Angular, and Node.js. View Naff Mwaura's portfolio featuring full-stack and AI applications." />
     
-    <!-- 3. KEYWORDS (Less important now, but still useful) -->
+    <!-- 3. KEYWORDS -->
     <meta name="keywords" content="Naff Mwaura, Naff, Software Engineer, React Developer, Node.js, TypeScript, Angular, Kenya, Frontend, Backend, Full-Stack" />
     
-    <!-- 4. Open Graph Tags (for Social Media sharing, e.g., LinkedIn) -->
+    <!-- 4. Open Graph Tags (Social Media) -->
+    <meta property="og:type" content="website" />
     <meta property="og:title" content="Naff Mwaura | Software Engineer Portfolio" />
     <meta property="og:description" content="Seasoned engineer specializing in React, TypeScript, and Node.js. Hire Naff Mwaura." />
     <meta property="og:url" content="https://naffzoe-portfolio.netlify.app/" />
-    <link rel="icon" type="image/jpg" href="./src/assets/file-removebg-preview.png"/>
+    <meta property="og:image" content="https://naffzoe-portfolio.netlify.app/og-image.jpg" />
 
-    <!-- Add other head elements here -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Google Fonts (Optional but recommended for a professional look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- React Entry Point -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
