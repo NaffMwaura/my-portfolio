@@ -1,91 +1,138 @@
+//import React from 'react';
 import Slider from "react-slick";
+import { motion } from "framer-motion";
+import { Typewriter } from 'react-simple-typewriter';
+import { Download, ChevronRight } from 'lucide-react';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { Typewriter } from 'react-simple-typewriter';
 
-// Ensure these paths are correct in your project structure
+// Assets
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
-import profile5 from "../assets/sui.jpg"
+import profile5 from "../assets/sui.jpg";
 import profile7 from "../assets/dcc.jpg";
 
 const Hero = () => {
   const images = [profile2, profile3, profile4, profile5, profile7];
-  const professions = ['Software Developer', 'AI/ML Engineer', 'IT Student'];
+  const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Architect Ninja'];
 
   const settings = {
     dots: false,
     infinite: true,
-    speed: 8000,
+    speed: 1500, // Smoother transition
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 200,
+    autoplaySpeed: 4000,
     arrows: false,
+    fade: true, // Fade effect looks more professional for portfolios
   };
 
   return (
     <section
       id="home"
-      // Adjusted padding to avoid double spacing with the new Divider component
-      className="scroll-mt-20 flex flex-col-reverse md:flex-row items-center justify-center pt-20 md:pt-28 pb-0 bg-[#0b0c2a] text-white"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-12 overflow-hidden bg-[#0b0c2a] text-white"
     >
-      {/* FIX 1: Use justify-start to push the whole group left. 
-         FIX 2: Use a combination of md:gap-16 and md:mr-10 to define separation.
-         We are using md:justify-start to achieve the "off-center left" look.
-      */}
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center md:justify-start gap-8 md:gap-16 px-4 md:px-10">
-        
-        {/* Left Content */}
-        {/* INCREASED width to max-w-xl to allow the headline text to fit on one line and ensure the content sticks left */}
-        <div className="max-w-xl text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl text-red-500 font-bold">Hello, I'm</h2>
+      {/* Background Decorative Elements */}
+      <div className="absolute top-1/4 -left-20 w-72 h-72 bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 -right-20 w-72 h-72 bg-purple-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 md:px-10 z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
           
-          {/* Static h1 for the name for better SEO and accessibility */}
-          <h1 className="text-4xl sm:text-5xl font-bold text-green-400 mt-2">Naff Mwaura, Full-Stack Developer ✨</h1>
-          
-          <div className="flex justify-center md:justify-start gap-3 mt-4 flex-wrap text-lg">
-            <span className="text-yellow-400 font-medium">
+          {/* Left Content: Text & CTA */}
+          <motion.div 
+            className="flex-1 text-center md:text-left space-y-6"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-medium tracking-wider uppercase">
+              <span className="relative flex h-2 w-2 mr-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
+              Available for new projects
+            </div>
+
+            <h2 className="text-xl sm:text-2xl font-semibold text-slate-400">
+              Hello, I'm <span className="text-white">Naff Mwaura</span>
+            </h2>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
+              Building <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">Digital Excellence</span> in Kenya
+            </h1>
+            
+            <div className="h-8 text-xl sm:text-2xl text-yellow-400 font-mono">
               <Typewriter
                 words={professions}
-                loop={true}
+                loop={0}
                 cursor
-                cursorStyle="_"
-                typeSpeed={150}
-                deleteSpeed={100}
-                delaySpeed={1500}
+                cursorStyle="|"
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={2000}
               />
-            </span>
-          </div>
-          
-          <p className="mt-4 text-gray-300 max-w-md mx-auto md:mx-0">
-             Specializing in TypeScript, React, Node.js, and Kubernetes (K3S).
-          </p>
+            </div>
+            
+            <p className="text-slate-400 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+              Specializing in <span className="text-slate-200">TypeScript, React, Node.js</span>, and robust cloud infrastructure with <span className="text-slate-200">Kubernetes</span>. 
+              Bridging the gap between AI innovation and scalable web systems.
+            </p>
 
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-block mt-6 px-6 py-2 bg-purple-500 rounded text-white font-semibold hover:bg-purple-600 transition duration-300"
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
+              <a
+                href="/resume.pdf"
+                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-900/20 active:scale-95"
+              >
+                <Download size={20} />
+                Download Resume
+              </a>
+              <a
+                href="#projects"
+                className="group w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-xl font-bold transition-all duration-300 active:scale-95"
+              >
+                View Portfolio
+                <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right Content: Profile Carousel */}
+          <motion.div 
+            className="flex-1 flex justify-center items-center relative"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Download Resume
-          </a>
-        </div>
-
-        {/* Right - Carousel */}
-        {/* FIX: Increased left margin from md:ml-10 to md:ml-20 to push the carousel further right */}
-        <div className="w-[260px] sm:w-[300px] md:w-[320px] h-[400px] sm:h-[430px] md:h-[450px] rounded-xl overflow-hidden shadow-lg bg-black md:ml-20">
-          <Slider {...settings}>
-            {images.map((img, idx) => (
-              <div key={idx} className="w-full h-full flex items-center justify-center">
-                <img
-                  src={img}
-                  alt={`Profile ${idx + 1}`}
-                  className="w-auto h-full object-contain"
-                />
+            {/* Visual Backing Effect */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-[2.5rem] blur-2xl transform rotate-6 scale-90"></div>
+            
+            <div className="relative w-[280px] sm:w-[340px] lg:w-[380px] aspect-[3/4] bg-slate-900 rounded-[2rem] p-2 border border-white/10 shadow-2xl overflow-hidden group">
+              <Slider {...settings} className="h-full">
+                {images.map((img, idx) => (
+                  <div key={idx} className="h-full outline-none">
+                    <div className="relative h-full w-full flex items-center justify-center bg-[#0b0c2a] rounded-[1.5rem] overflow-hidden">
+                      <img
+                        src={img}
+                        alt={`Naff Mwaura Profile ${idx + 1}`}
+                        className="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Subtle Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0b0c2a]/60 via-transparent to-transparent"></div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+              
+              {/* Glassmorphism Badge */}
+              <div className="absolute bottom-6 left-6 right-6 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl">
+                 <p className="text-xs font-bold text-blue-400 uppercase tracking-tighter">Current Focus</p>
+                 <p className="text-sm font-medium text-white italic">AI-Driven Systems</p>
               </div>
-            ))}
-          </Slider>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
