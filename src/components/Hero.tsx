@@ -15,7 +15,7 @@ import profile7 from "../assets/dcc.jpg";
 
 const Hero = () => {
   const images = [profile2, profile3, profile4, profile5, profile7];
-  const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Architect'];
+  const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Ninja'];
 
   const settings = {
     dots: false,
