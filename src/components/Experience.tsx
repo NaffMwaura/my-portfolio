@@ -182,3 +182,5 @@ export const Skills = () => {
     </section>
   );
 };
+
+export default Experience
