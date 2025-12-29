@@ -36,9 +36,9 @@ const Contact = () => {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   // Replace import.meta.env with placeholders for the preview environment
-  const EMAILJS_SERVICE_ID = "service_placeholder";
-  const EMAILJS_TEMPLATE_ID = "template_placeholder";
-  const EMAILJS_PUBLIC_KEY = "public_key_placeholder";
+  const EMAILJS_SERVICE_ID = "service_1h59vyh";
+  const EMAILJS_TEMPLATE_ID = "template_gnjhtsz";
+  const EMAILJS_PUBLIC_KEY = "0bD1frYxy5oJvv1SW";
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
