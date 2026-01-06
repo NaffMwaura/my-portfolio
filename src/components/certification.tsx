@@ -1,6 +1,6 @@
 //import React from 'react';
 import { motion } from "framer-motion";
-import { ExternalLink,  ShieldCheck, CheckCircle2, Medal } from 'lucide-react';
+import { ExternalLink, ShieldCheck, CheckCircle2, Medal, } from 'lucide-react';
 
 interface CertificationData {
   id: string;
@@ -113,24 +113,30 @@ const Certification = () => {
             >
               {/* Top Icon Decoration */}
               <div className="flex justify-between items-start mb-6">
-                <div className="p-3 bg-blue-500/10 rounded-2xl border border-blue-500/20 group-hover:scale-110 transition-transform duration-300">
-                  <ShieldCheck className="text-blue-400" size={24} />
+                {/* Fixed: Blue icon by default, Cyan on hover */}
+                <div className="p-3 bg-blue-500/10 rounded-2xl border border-blue-500/20 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+                  <ShieldCheck className="text-blue-500 group-hover:text-cyan-400" size={24} />
                 </div>
-                <Medal className="text-slate-700 group-hover:text-purple-500/50 transition-colors" size={20} />
+                {/* Fixed: Amber/Gold icon by default, Purple on hover */}
+                <Medal className="text-amber-500 group-hover:text-purple-400 transition-colors duration-300" size={20} />
               </div>
 
               {/* Badge/Logo Image */}
               <div className="flex-grow flex flex-col items-center text-center">
                 <div className="w-32 h-32 mb-6 flex items-center justify-center relative">
                    {/* Background Glow behind logo */}
-                  <div className="absolute inset-0 bg-blue-500/5 blur-2xl rounded-full"></div>
+                  <div className="absolute inset-0 bg-blue-500/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <img 
                     src={cert.imageSrc} 
                     alt={cert.title} 
-                    className="max-w-full max-h-full object-contain relative z-10 filter grayscale group-hover:grayscale-0 transition-all duration-500" 
+                  //  {/* Fixed: Removed grayscale, added scale and drop-shadow on hover */}
+                    className="max-w-full max-h-full object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" 
                     onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = '<div class="text-blue-400 opacity-20"><Award size={64} /></div>';
+                        const parent = e.currentTarget.parentElement;
+                        if (parent) {
+                           parent.innerHTML = '<div class="text-blue-400 opacity-40"><Award size={64} /></div>';
+                        }
                     }}
                   />
                 </div>
@@ -138,7 +144,7 @@ const Certification = () => {
                 <h4 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   {cert.title}
                 </h4>
-                <p className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-6">
+                <p className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-6">
                   {cert.issuer}
                 </p>
               </div>
@@ -149,7 +155,7 @@ const Certification = () => {
                   href={cert.verifyLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-transparent border border-green-500/30 text-green-400 rounded-xl hover:bg-green-500/10 hover:border-green-500 transition-all duration-300 font-semibold text-sm group/btn"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-transparent border border-green-500/30 text-green-400 rounded-xl hover:bg-green-500 hover:text-white transition-all duration-300 font-semibold text-sm group/btn"
                 >
                   <CheckCircle2 size={16} className="group-hover/btn:scale-110 transition-transform" />
                   Verify Credential

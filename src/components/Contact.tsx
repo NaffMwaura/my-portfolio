@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { 
   Github, 
   Linkedin, 
   Twitter, 
   Facebook, 
-  MessageSquare, 
   Send, 
   Mail, 
   Phone, 
@@ -14,28 +14,28 @@ import {
   AlertCircle
 } from "lucide-react";
 
-/**
- * NOTE: To resolve the build error in this environment, 
- * I have replaced the @emailjs/browser import with a mock function.
- * In your local project, ensure you run: npm install @emailjs/browser
- */
-const mockEmailJS = {
-  sendForm: (serviceId: string, templateId: string, _form: HTMLFormElement, publicKey: string) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log("Mock Email Sent with:", { serviceId, templateId, publicKey });
-        resolve({ text: "OK" });
-      }, 2000);
-    });
-  }
-};
+// Custom WhatsApp SVG for a premium look
+const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+);
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  // Replace import.meta.env with placeholders for the preview environment
+  // Using your provided credentials directly
   const EMAILJS_SERVICE_ID = "service_1h59vyh";
   const EMAILJS_TEMPLATE_ID = "template_gnjhtsz";
   const EMAILJS_PUBLIC_KEY = "0bD1frYxy5oJvv1SW";
@@ -47,8 +47,8 @@ const Contact = () => {
     setIsSending(true);
     setStatus('idle');
 
-    // Using mockEmailJS for the canvas preview
-    mockEmailJS
+    // REAL EMAILJS INTEGRATION
+    emailjs
       .sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
@@ -63,7 +63,7 @@ const Contact = () => {
           setTimeout(() => setStatus('idle'), 5000);
         },
         (error) => {
-          console.error(error);
+          console.error("EmailJS Error:", error);
           setStatus('error');
           setIsSending(false);
         }
@@ -132,7 +132,7 @@ const Contact = () => {
                   <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-blue-400">
                     <Mail size={20} />
                   </div>
-                  <span>naftalimwaura@gmail.com</span>
+                  <span>naftali795@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-4 text-slate-300">
                   <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-green-400">
@@ -157,7 +157,7 @@ const Contact = () => {
                   { icon: Linkedin, href: "https://www.linkedin.com/in/naff-mwaura-2bb415257/", color: "hover:text-blue-500" },
                   { icon: Twitter, href: "https://x.com/Naff_Zoe", color: "hover:text-blue-400" },
                   { icon: Facebook, href: "https://www.facebook.com/naftali.mwaura.352343/", color: "hover:text-blue-600" },
-                  { icon: MessageSquare, href: "https://wa.me/254115408536", color: "hover:text-green-500" },
+                  { icon: WhatsAppIcon, href: "https://wa.me/254115408536", color: "hover:text-green-500" },
                 ].map((social, i) => (
                   <a
                     key={i}
@@ -188,7 +188,7 @@ const Contact = () => {
                     <label className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
                     <input
                       type="text"
-                      name="name"
+                      name="from_name"
                       required
                       placeholder="John Doe"
                       className="w-full bg-[#0b0c2a]/50 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
@@ -198,7 +198,7 @@ const Contact = () => {
                     <label className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">Email Address</label>
                     <input
                       type="email"
-                      name="email"
+                      name="reply_to"
                       required
                       placeholder="john@example.com"
                       className="w-full bg-[#0b0c2a]/50 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
