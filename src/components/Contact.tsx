@@ -1,32 +1,32 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Send, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  CheckCircle2, 
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Send,
+  Mail,
+  Phone,
+  MapPin,
+  CheckCircle2,
   AlertCircle
 } from "lucide-react";
 
 // Custom WhatsApp SVG for a premium look
 const WhatsAppIcon = ({ size = 24 }: { size?: number }) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
   </svg>
 );
 
@@ -84,8 +84,8 @@ const Contact = () => {
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="relative scroll-mt-20 bg-[#0b0c2a] text-white py-20 md:py-32 overflow-hidden"
     >
       {/* Background Visual Flair */}
@@ -95,7 +95,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         {/* Section Header */}
         <div className="mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,7 +103,7 @@ const Contact = () => {
           >
             07. Get In Touch
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -115,7 +115,7 @@ const Contact = () => {
 
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Left Column: Socials & Info */}
-          <motion.div 
+          <motion.div
             className="lg:w-2/5 space-y-10"
             variants={containerVariants}
             initial="hidden"
@@ -126,7 +126,7 @@ const Contact = () => {
               <p className="text-slate-400 text-lg leading-relaxed">
                 Whether you have a project in mind, a question about my stack, or just want to connect—my inbox is always open.
               </p>
-              
+
               <div className="space-y-4 pt-4">
                 <div className="flex items-center gap-4 text-slate-300">
                   <div className="p-3 bg-white/5 rounded-xl border border-white/10 text-blue-400">
@@ -174,7 +174,7 @@ const Contact = () => {
           </motion.div>
 
           {/* Right Column: Contact Form */}
-          <motion.div 
+          <motion.div
             className="lg:w-3/5"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -183,12 +183,13 @@ const Contact = () => {
           >
             <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
               <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
+                {/* Inside your form */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">Full Name</label>
                     <input
                       type="text"
-                      name="from_name"
+                      name="name"
                       required
                       placeholder="John Doe"
                       className="w-full bg-[#0b0c2a]/50 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
@@ -198,14 +199,14 @@ const Contact = () => {
                     <label className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">Email Address</label>
                     <input
                       type="email"
-                      name="reply_to"
+                      name="user_email"
                       required
                       placeholder="john@example.com"
                       className="w-full bg-[#0b0c2a]/50 border border-white/10 rounded-2xl p-4 text-white focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label className="text-xs font-mono uppercase tracking-wider text-slate-500 ml-1">Your Message</label>
                   <textarea
@@ -234,8 +235,8 @@ const Contact = () => {
 
                 {/* Status Messages */}
                 {status === 'success' && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }} 
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2 text-green-400 bg-green-400/10 p-4 rounded-xl border border-green-400/20"
                   >
@@ -244,8 +245,8 @@ const Contact = () => {
                   </motion.div>
                 )}
                 {status === 'error' && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }} 
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2 text-red-400 bg-red-400/10 p-4 rounded-xl border border-red-400/20"
                   >
@@ -262,7 +263,7 @@ const Contact = () => {
         </div>
 
         {/* Enhanced Footer */}
-        <motion.footer 
+        <motion.footer
           className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -272,13 +273,13 @@ const Contact = () => {
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-xs">NM</div>
             <p className="text-slate-500 text-sm">© 2025 Naftaly Boro Mwaura. All rights reserved.</p>
           </div>
-          
+
           <div className="flex gap-4 text-[10px] font-mono tracking-widest text-slate-600 uppercase">
-             <span className="text-blue-500/50">Fullstack Developer</span>
-             <span className="hidden sm:inline">•</span>
-             <span className="text-purple-500/50">AI/ML Engineer</span>
-             <span className="hidden sm:inline">•</span>
-             <span className="text-green-500/50">IT Student</span>
+            <span className="text-blue-500/50">Fullstack Developer</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-purple-500/50">AI/ML Engineer</span>
+            <span className="hidden sm:inline">•</span>
+            <span className="text-green-500/50">IT Student</span>
           </div>
 
           <div className="flex items-center gap-1 text-slate-500 text-xs">
