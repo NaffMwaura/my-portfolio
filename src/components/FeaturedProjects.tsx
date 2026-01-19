@@ -19,6 +19,7 @@ const projects = [
     github: "https://github.com/NaffMwaura/coffee-disease-detector",
     tags: ["React", "FastAPI", "TensorFlow", "PWA"]
   },
+ 
   {
     title: "PostCraft AI",
     desc: "Experimental Angular application utilizing Chrome's Built-in AI (Gemini Nano) for on-device text generation and OCR, prioritizing user privacy and low latency.",
@@ -51,6 +52,14 @@ const projects = [
     github: "https://github.com/NaffMwaura/QuoteManagerApp",
     tags: ["React", "State Mgmt", "CRUD"]
   },
+   {
+  title: "QS Pocket Knife: Offline Estimator",
+  desc: "A mission-critical PWA for Quantity Surveyors. Features a 'Verify Once' architecture for 100% offline functionality on remote sites, using Dexie.js for local CAD drawing storage and measurement persistence.",
+  img: "./qs-pocket-knife.png", // Make sure to save a high-res screenshot of your dashboard
+  live: "https://momentum-qs.netlify.app",
+  github: "https://github.com/NaffMwaura/Momentum-Labs-Team--C",
+  tags: ["React 19", "Supabase", "Dexie.js", "PWA", "Tailwind v4"]
+},
   {
     title: "Inn Booking Website",
     desc: "Dynamic reservation system for local hospitality. Features an administrative dashboard for room inventory and reservation tracking built with PHP and MySQL.",
@@ -58,7 +67,9 @@ const projects = [
     live: "https://github.com/NaffMwaura/inn-Website",
     github: "https://github.com/NaffMwaura/inn-Website",
     tags: ["PHP", "MySQL", "Admin Panel"]
-  }
+  },
+  
+  
 ];
 
 const FeaturedProjects = () => {
