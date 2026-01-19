@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink, Code,  Layers } from 'lucide-react';
 
 const projects = [
+    {
+    title: "AgroScan AI: Tea Detector",
+    desc: "A high-impact agricultural PWA for tea farmers in Kiambu. Diagnoses leaf diseases using MobileNetV2 with real-time assistance via an integrated AI chatbot.",
+    img: "./agro.png",
+    live: "https://coffeescan-ai.netlify.app",
+    github: "https://github.com/NaffMwaura/coffee-disease-detector",
+    tags: ["React", "FastAPI", "TensorFlow", "PWA"]
+  },
   {
     title: "SkillMatch AI",
     desc: "A sophisticated recruitment engine that leverages AI to match job seekers with optimal roles based on skills and experience. Features a robust PostgreSQL backbone and a seamless Angular interface.",
@@ -11,15 +19,17 @@ const projects = [
     github: "https://github.com/NaffMwaura/skillsmatchai-app",
     tags: ["Angular", "Node.js", "Express", "PostgreSQL", "AI"]
   },
-  {
-    title: "AgroScan AI: Tea Detector",
-    desc: "A high-impact agricultural PWA for tea farmers in Kiambu. Diagnoses leaf diseases using MobileNetV2 with real-time assistance via an integrated AI chatbot.",
-    img: "./agro.png",
-    live: "https://coffeescan-ai.netlify.app",
-    github: "https://github.com/NaffMwaura/coffee-disease-detector",
-    tags: ["React", "FastAPI", "TensorFlow", "PWA"]
-  },
+
  
+    {
+    title: "Inn Booking Website",
+    desc: "Dynamic reservation system for local hospitality. Features an administrative dashboard for room inventory and reservation tracking built with PHP and MySQL.",
+    img: "download (5).jpg",
+    live: "https://github.com/NaffMwaura/inn-Website",
+    github: "https://github.com/NaffMwaura/inn-Website",
+    tags: ["PHP", "MySQL", "Admin Panel"]
+  },
+
   {
     title: "PostCraft AI",
     desc: "Experimental Angular application utilizing Chrome's Built-in AI (Gemini Nano) for on-device text generation and OCR, prioritizing user privacy and low latency.",
@@ -61,13 +71,14 @@ const projects = [
   tags: ["React 19", "Supabase", "Dexie.js", "PWA", "Tailwind v4"]
 },
   {
-    title: "Inn Booking Website",
-    desc: "Dynamic reservation system for local hospitality. Features an administrative dashboard for room inventory and reservation tracking built with PHP and MySQL.",
-    img: "download (5).jpg",
-    live: "https://github.com/NaffMwaura/inn-Website",
-    github: "https://github.com/NaffMwaura/inn-Website",
-    tags: ["PHP", "MySQL", "Admin Panel"]
-  },
+  title: "NutriPredict AI: Clinical CDSS",
+  desc: "A Clinical Decision Support System (CDSS) that utilizes a Random Forest Classifier trained on NHANES (National Health and Nutrition Examination Survey) data to predict sub-clinical iron and Vitamin D deficiencies with 65% accuracy.",
+  img: "./nutri-predict.png", // Ensure you take a screenshot of your new Glassmorphism dashboard!
+  live: "https://deficiency-ai-diagnostic.netlify.app/",
+  github: "https://github.com/NaffMwaura/nutri-predict-ml",
+  tags: ["FastAPI", "Random Forest", "React 19", "Tailwind v4", "NHANES"]
+},
+
   
   
 ];
