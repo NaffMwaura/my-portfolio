@@ -66,7 +66,7 @@ const projects = [
   title: "QS Pocket Knife: Offline Estimator",
   desc: "A mission-critical PWA for Quantity Surveyors. Features a 'Verify Once' architecture for 100% offline functionality on remote sites, using Dexie.js for local CAD drawing storage and measurement persistence.",
   img: "./qs-pocket-knife.png", // Make sure to save a high-res screenshot of your dashboard
-  live: "https://momentum-qs.netlify.app",
+  live: "https://qs-vault.netlify.app/",
   github: "https://github.com/NaffMwaura/Momentum-Labs-Team--C",
   tags: ["React 19", "Supabase", "Dexie.js", "PWA", "Tailwind v4"]
 },
