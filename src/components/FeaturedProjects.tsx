@@ -63,6 +63,7 @@ const projects = [
     tags: ["React", "State Mgmt", "CRUD"]
   },
   
+  
    {
   title: "QS Pocket Knife: Offline Estimator",
   desc: "A mission-critical PWA for Quantity Surveyors. Features a 'Verify Once' architecture for 100% offline functionality on remote sites, using Dexie.js for local CAD drawing storage and measurement persistence.",
