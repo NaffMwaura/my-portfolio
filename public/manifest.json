@@ -1,0 +1,35 @@
+{
+  "name": "Naff Mwaura Portfolio",
+  "short_name": "NaffPort",
+  "description": "Software Developer Portfolio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0c2a",
+  "theme_color": "#0b0c2a",
+  "icons": [
+    {
+      "src": "public/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "public/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
