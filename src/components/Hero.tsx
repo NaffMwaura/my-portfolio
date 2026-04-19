@@ -15,7 +15,7 @@ import profile7 from "../assets/dcc.jpg";
 
 const Hero = () => {
   const images = [profile2, profile3, profile4, profile5, profile7];
-  const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Ninja'];
+  const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Engineer'];
 
   const settings = {
     dots: false,
@@ -85,7 +85,7 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1pNf5Ez2z3Yz2BH0hZEDSk7qmoH1OJyzK/view?usp=sharing"
                 className="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold transition-all duration-300 shadow-xl shadow-blue-900/20 flex items-center justify-center gap-2 active:scale-95"
               >
                 <Download size={18} />
