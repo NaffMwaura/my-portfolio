@@ -7,14 +7,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Assets
+import profile6 from "../assets/Degree_Naff.jpg";
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
 import profile5 from "../assets/sui.jpg";
-import profile7 from "../assets/dcc.jpg";
+import profile8 from "../assets/bestpic1.jpg"
 
 const Hero = () => {
-  const images = [profile2, profile3, profile4, profile5, profile7];
+  const images = [profile6, profile8, profile2, profile3, profile4, profile5];
   const professions = ['Software Developer', 'AI/ML Engineer', 'Full-Stack Engineer'];
 
   const settings = {
