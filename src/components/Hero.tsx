@@ -7,12 +7,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Assets
-import profile6 from "../assets/Degree_Naff.jpg";
+import profile6 from "../assets/Degree1.jpg";
 import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
 import profile5 from "../assets/sui.jpg";
-import profile8 from  "../assets/bestpic1.jpg"
+import profile8 from  "../assets/Degree2.jpg"
+
 
 const Hero = () => {
   const images = [profile6, profile8, profile2, profile3, profile4, profile5];
