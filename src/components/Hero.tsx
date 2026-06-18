@@ -12,7 +12,7 @@ import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
 import profile5 from "../assets/sui.jpg";
-import profile8 from "../assets/bestpic1.jpg"
+import profile8 from  "../assets/bestpic1.jpg"
 
 const Hero = () => {
   const images = [profile6, profile8, profile2, profile3, profile4, profile5];
