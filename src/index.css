@@ -1,9 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
 @import "tailwindcss";
-@import 'slick-carousel/slick/slick.css';
-@import 'slick-carousel/slick/slick-theme.css';
 
 /* Import premium fonts: elegant luxury serif for the logo + supporting sans serif */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap');
 
 html {
   scroll-behavior: smooth;
