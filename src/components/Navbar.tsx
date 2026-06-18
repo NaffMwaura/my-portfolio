@@ -25,8 +25,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 lg:px-10">
         
         {/* Logo / Name - Scale text for readability */}
-        <h1 className="font-bold text-xl sm:text-2xl tracking-tighter">
-          <a href="#" className="hover:opacity-80 transition-opacity">
+        <h1 className="font-bold text-xl sm:text-2xl tracking-tighter logo-heading">
+          <a href="#" className="hover:opacity-80 transition-opacity logo-link">
             <span className="text-blue-500">Naff</span> Mwaura
           </a>
         </h1>
