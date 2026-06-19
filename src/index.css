@@ -36,6 +36,8 @@ a.logo-link span.text-blue-500 {
   background-clip: text;
 }
 
+
+
 /* 3. Make the overall navbar taller */
 nav.py-4 {
   padding-top: 1.5rem !important;    
