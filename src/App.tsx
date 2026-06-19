@@ -16,10 +16,10 @@ const App = () => {
       <Divider />
       <About />
       <Education />
-      < FeaturedProjects/>
+      < FeaturedProjects />
       <Experience />
       <Certification />
-      <Skills/>
+      <Skills />
       <Contact />
     </div>
   );
