@@ -1,6 +1,6 @@
 //import React from 'react';
 import { motion } from "framer-motion";
-import {  MapPin, GraduationCap, Target, Terminal, Cpu } from 'lucide-react';
+import { MapPin, GraduationCap, Target, Terminal, Cpu } from 'lucide-react';
 
 const About = () => {
   // Stagger animation variants for the cards
@@ -36,7 +36,7 @@ const About = () => {
 
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           {/* Left Side: Textual Narrative */}
           <div className="flex-1 space-y-8">
             <motion.div
@@ -49,10 +49,10 @@ const About = () => {
                 01. About Me
               </h2>
               <h3 className="text-3xl sm:text-5xl font-bold mb-6">
-                Merging <span className="text-purple-400">Logic</span> with <br /> 
+                Merging <span className="text-purple-400">Logic</span> with <br />
                 Digital <span className="text-cyan-400">Adventure</span>
               </h3>
-              
+
               <div className="space-y-6 text-slate-400 leading-relaxed text-base sm:text-lg">
                 <p>
                   I’m <span className="text-white font-medium">Naff Mwaura</span>, an IT student from Kenya with a strong passion for technology and a spirit of adventure. My core expertise lies in building resilient and scalable solutions using <span className="text-blue-400">TypeScript, React, Angular, and Node.js</span>.
@@ -77,7 +77,7 @@ const About = () => {
           </div>
 
           {/* Right Side: Quick Info Cards (Visual Stacking) */}
-          <motion.div 
+          <motion.div
             className="flex-1 w-full"
             variants={containerVariants}
             initial="hidden"
@@ -96,7 +96,7 @@ const About = () => {
                   <p className="text-sm sm:text-base font-semibold text-slate-200">{fact.value}</p>
                 </motion.div>
               ))}
-              
+
               {/* Feature Box (Spans 2 columns on tablet+) */}
               <motion.div
                 variants={itemVariants}
