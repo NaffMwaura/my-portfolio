@@ -70,8 +70,8 @@ const Certification = () => {
   };
 
   return (
-    <section 
-      id="certification" 
+    <section
+      id="certification"
       className="relative scroll-mt-20 bg-[#0b0c2a] text-white py-20 md:py-32 overflow-hidden"
     >
       {/* Decorative Glows */}
@@ -80,7 +80,7 @@ const Certification = () => {
 
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -88,7 +88,7 @@ const Certification = () => {
           >
             05. Credentials
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -98,7 +98,7 @@ const Certification = () => {
           </motion.h3>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -124,23 +124,23 @@ const Certification = () => {
               {/* Badge/Logo Image */}
               <div className="flex-grow flex flex-col items-center text-center">
                 <div className="w-32 h-32 mb-6 flex items-center justify-center relative">
-                   {/* Background Glow behind logo */}
+                  {/* Background Glow behind logo */}
                   <div className="absolute inset-0 bg-blue-500/5 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <img 
-                    src={cert.imageSrc} 
-                    alt={cert.title} 
-                  //  {/* Fixed: Removed grayscale, added scale and drop-shadow on hover */}
-                    className="max-w-full max-h-full object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]" 
+                  <img
+                    src={cert.imageSrc}
+                    alt={cert.title}
+                    //  {/* Fixed: Removed grayscale, added scale and drop-shadow on hover */}
+                    className="max-w-full max-h-full object-contain relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]"
                     onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        const parent = e.currentTarget.parentElement;
-                        if (parent) {
-                           parent.innerHTML = '<div class="text-blue-400 opacity-40"><Award size={64} /></div>';
-                        }
+                      e.currentTarget.style.display = 'none';
+                      const parent = e.currentTarget.parentElement;
+                      if (parent) {
+                        parent.innerHTML = '<div class="text-blue-400 opacity-40"><Award size={64} /></div>';
+                      }
                     }}
                   />
                 </div>
-                
+
                 <h4 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   {cert.title}
                 </h4>
