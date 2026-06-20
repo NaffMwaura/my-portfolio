@@ -1,17 +1,17 @@
 //import React from 'react';
 import { motion } from "framer-motion";
-import { 
-  Briefcase, 
-  Calendar, 
-  Terminal, 
-   
-  Award, 
-   
-  Cpu, 
-  Code2, 
-  Library, 
-  Database, 
-  Cloud 
+import {
+  Briefcase,
+  Calendar,
+  Terminal,
+
+  Award,
+
+  Cpu,
+  Code2,
+  Library,
+  Database,
+  Cloud
 } from 'lucide-react';
 
 const experiences = [
