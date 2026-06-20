@@ -62,8 +62,8 @@ const Education = () => {
   };
 
   return (
-    <section 
-      id="education" 
+    <section
+      id="education"
       className="relative scroll-mt-20 bg-[#0b0c2a] text-white py-20 md:py-32 overflow-hidden"
     >
       {/* Decorative Glow */}
@@ -71,7 +71,7 @@ const Education = () => {
 
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -79,7 +79,7 @@ const Education = () => {
           >
             02. Academic Journey
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -90,7 +90,7 @@ const Education = () => {
           </motion.h3>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={containerVariants}
           initial="hidden"
@@ -112,7 +112,7 @@ const Education = () => {
               <div className="relative mb-6">
                 {/* Dynamic Glow Ring on Hover */}
                 <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="w-24 h-24 rounded-2xl bg-slate-900/50 border border-white/5 p-4 flex items-center justify-center relative overflow-hidden group-hover:scale-110 group-hover:border-blue-500/30 transition-all duration-500">
                   <img
                     src={edu.img}
