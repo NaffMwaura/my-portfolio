@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
 import { Download, ChevronRight, Zap } from 'lucide-react';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Assets
@@ -12,7 +12,7 @@ import profile2 from "../assets/Naff_Graduating.jpg";
 import profile3 from "../assets/igm1.jpg";
 import profile4 from "../assets/profile.jpg";
 import profile5 from "../assets/sui.jpg";
-import profile8 from  "../assets/Degree2.jpg"
+import profile8 from "../assets/Degree2.jpg"
 
 
 const Hero = () => {
@@ -46,9 +46,9 @@ const Hero = () => {
             DESKTOP: md:flex-row (side-by-side)
         */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
-          
+
           {/* 1. TEXT SECTION - Appears first on mobile */}
-          <motion.div 
+          <motion.div
             className="w-full md:flex-1 text-center md:text-left space-y-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,12 +62,12 @@ const Hero = () => {
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-slate-400">
               Hello, I'm <span className="text-white">Naff Mwaura</span>
             </h2>
-            
+
             {/* Font scaling: text-3xl for small phones, scaling up to 7xl for monitors */}
             <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.15]">
               Building <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">Digital Excellence</span> in Kenya
             </h1>
-            
+
             <div className="h-8 text-lg sm:text-2xl text-yellow-400 font-mono font-medium">
               <Typewriter
                 words={professions}
@@ -79,9 +79,9 @@ const Hero = () => {
                 delaySpeed={2000}
               />
             </div>
-            
+
             <p className="text-slate-400 text-sm sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
-              Specializing in <span className="text-slate-200">TypeScript, React, and Node.js</span>. 
+              Specializing in <span className="text-slate-200">TypeScript, React, and Node.js</span>.
               Bridging the gap between AI innovation and scalable web systems.
             </p>
 
@@ -104,7 +104,7 @@ const Hero = () => {
           </motion.div>
 
           {/* 2. IMAGE SECTION - Appears below text on mobile */}
-          <motion.div 
+          <motion.div
             className="w-full md:flex-1 flex justify-center items-center relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -112,7 +112,7 @@ const Hero = () => {
           >
             {/* Visual Glow behind image */}
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 rounded-[2.5rem] blur-2xl transform scale-90 md:rotate-6"></div>
-            
+
             {/* Fixed Aspect Ratio Container: Resizes based on screen width but keeps proportions */}
             <div className="relative w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[360px] aspect-[3/4] bg-slate-900 rounded-[2.5rem] p-2 border border-white/10 shadow-2xl overflow-hidden group">
               <Slider {...settings} className="h-full">
@@ -130,11 +130,11 @@ const Hero = () => {
                   </div>
                 ))}
               </Slider>
-              
+
               {/* Floating Info Badge - Only visible when text is large enough */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/5 backdrop-blur-xl border border-white/10 p-4 rounded-2xl hidden sm:block">
-                 <p className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Specialization</p>
-                 <p className="text-sm font-semibold text-white italic">AI & Scalable Architecture</p>
+                <p className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Specialization</p>
+                <p className="text-sm font-semibold text-white italic">AI & Scalable Architecture</p>
               </div>
             </div>
           </motion.div>
