@@ -1,9 +1,9 @@
 //import React from 'react';
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Code,  Layers } from 'lucide-react';
+import { Github, ExternalLink, Code, Layers } from 'lucide-react';
 
 const projects = [
-    {
+  {
     title: "AgroScan AI: Tea Detector",
     desc: "A high-impact agricultural PWA for tea farmers in Kiambu. Diagnoses leaf diseases using MobileNetV2 with real-time assistance via an integrated AI chatbot.",
     img: "./agro.png",
@@ -20,8 +20,8 @@ const projects = [
     tags: ["Angular", "Node.js", "Express", "PostgreSQL", "AI"]
   },
 
- 
-    {
+
+  {
     title: "Inn Booking Website",
     desc: "Dynamic reservation system for local hospitality. Features an administrative dashboard for room inventory and reservation tracking built with PHP and MySQL.",
     img: "download (5).jpg",
@@ -62,27 +62,27 @@ const projects = [
     github: "https://github.com/NaffMwaura/QuoteManagerApp",
     tags: ["React", "State Mgmt", "CRUD"]
   },
-  
-  
-   {
-  title: "QS Pocket Knife: Offline Estimator",
-  desc: "A mission-critical PWA for Quantity Surveyors. Features a 'Verify Once' architecture for 100% offline functionality on remote sites, using Dexie.js for local CAD drawing storage and measurement persistence.",
-  img: "./qs-pocket-knife.png", // Make sure to save a high-res screenshot of your dashboard
-  live: "https://qs-vault.netlify.app/",
-  github: "https://github.com/NaffMwaura/Momentum-Labs-Team--C",
-  tags: ["React 19", "Supabase", "Dexie.js", "PWA", "Tailwind v4"]
-},
-  {
-  title: "NutriPredict AI: Clinical CDSS",
-  desc: "A Clinical Decision Support System (CDSS) that utilizes a Random Forest Classifier trained on NHANES (National Health and Nutrition Examination Survey) data to predict sub-clinical iron and Vitamin D deficiencies with 65% accuracy.",
-  img: "./nutri-predict.png", // Ensure you take a screenshot of your new Glassmorphism dashboard!
-  live: "https://deficiency-ai-diagnostic.netlify.app/",
-  github: "https://github.com/NaffMwaura/nutri-predict-ml",
-  tags: ["FastAPI", "Random Forest", "React 19", "Tailwind v4", "NHANES"]
-},
 
-  
-  
+
+  {
+    title: "QS Pocket Knife: Offline Estimator",
+    desc: "A mission-critical PWA for Quantity Surveyors. Features a 'Verify Once' architecture for 100% offline functionality on remote sites, using Dexie.js for local CAD drawing storage and measurement persistence.",
+    img: "./qs-pocket-knife.png", // Make sure to save a high-res screenshot of your dashboard
+    live: "https://qs-vault.netlify.app/",
+    github: "https://github.com/NaffMwaura/Momentum-Labs-Team--C",
+    tags: ["React 19", "Supabase", "Dexie.js", "PWA", "Tailwind v4"]
+  },
+  {
+    title: "NutriPredict AI: Clinical CDSS",
+    desc: "A Clinical Decision Support System (CDSS) that utilizes a Random Forest Classifier trained on NHANES (National Health and Nutrition Examination Survey) data to predict sub-clinical iron and Vitamin D deficiencies with 65% accuracy.",
+    img: "./nutri-predict.png", // Ensure you take a screenshot of your new Glassmorphism dashboard!
+    live: "https://deficiency-ai-diagnostic.netlify.app/",
+    github: "https://github.com/NaffMwaura/nutri-predict-ml",
+    tags: ["FastAPI", "Random Forest", "React 19", "Tailwind v4", "NHANES"]
+  },
+
+
+
 ];
 
 const FeaturedProjects = () => {
@@ -100,8 +100,8 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section 
-      id="projects" 
+    <section
+      id="projects"
       className="relative scroll-mt-20 bg-[#0b0c2a] text-white py-20 md:py-32 overflow-hidden"
     >
       {/* Decorative Glows */}
@@ -110,7 +110,7 @@ const FeaturedProjects = () => {
 
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -118,7 +118,7 @@ const FeaturedProjects = () => {
           >
             03. Selection of Work
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -128,7 +128,7 @@ const FeaturedProjects = () => {
           </motion.h3>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -168,11 +168,11 @@ const FeaturedProjects = () => {
                   <Code size={16} />
                   <span className="text-[10px] font-mono uppercase tracking-widest">Project {index + 1}</span>
                 </div>
-                
+
                 <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                   {project.title}
                 </h4>
-                
+
                 <p className="text-sm text-slate-400 line-clamp-3 mb-6 leading-relaxed">
                   {project.desc}
                 </p>
@@ -190,15 +190,15 @@ const FeaturedProjects = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           className="mt-16 text-center"
         >
-          <a 
-            href="https://github.com/NaffMwaura" 
-            target="_blank" 
+          <a
+            href="https://github.com/NaffMwaura"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border border-white/10 rounded-2xl hover:bg-white/5 hover:border-white/20 transition-all font-semibold"
           >
