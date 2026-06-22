@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="bg-[#0b0c2a]/95 backdrop-blur-xl text-white fixed top-0 left-0 w-full z-[100] py-4 border-b border-white/10 shadow-2xl">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 lg:px-10">
-        
+
         {/* Logo / Name - Scale text for readability */}
         <h1 className="font-bold text-xl sm:text-2xl tracking-tighter logo-heading">
           <a href="#" className="hover:opacity-80 transition-opacity logo-link">
