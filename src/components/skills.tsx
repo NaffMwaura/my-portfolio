@@ -44,8 +44,8 @@ const Skills = () => {
   };
 
   return (
-    <section 
-      id="skills" 
+    <section
+      id="skills"
       // FIX: Reduced bottom padding to pb-0 or pb-10 to prevent large gaps before the next section
       className="relative scroll-mt-20 bg-[#0b0c2a] text-white pt-20 md:pt-32 pb-10 overflow-hidden"
     >
@@ -56,7 +56,7 @@ const Skills = () => {
       <div className="container mx-auto px-6 md:px-10 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -64,7 +64,7 @@ const Skills = () => {
           >
             06. Technical Arsenal
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -76,7 +76,7 @@ const Skills = () => {
         </div>
 
         {/* Skills Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -114,7 +114,7 @@ const Skills = () => {
 
               {/* Subtle corner decoration */}
               <div className="absolute top-2 right-2 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                 <Wrench size={12} className="text-slate-700" />
+                <Wrench size={12} className="text-slate-700" />
               </div>
             </motion.div>
           ))}
