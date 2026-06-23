@@ -8,6 +8,7 @@ import Experience from "./components/Experience";
 import Skills from "./components/skills";
 import Contact from "./components/Contact";
 import Divider from "./components/Divider";
+
 const App = () => {
   return (
     <div>
